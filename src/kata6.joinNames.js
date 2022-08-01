@@ -1,14 +1,16 @@
 const joinNames = namesObj => {
-    let names = namesObj[0].name;
+    let names = '';
     const { length } = namesObj;
-    for (let i = 1; i < length; i++) {
-        if (i === length - 1) {
-            names += ` & ${namesObj[i].name}`
-        } else {
-            names += `, ${namesObj[i].name}`
+    const lastIndex = length - 1;
+    for (let i = 0; i < length; i++) {
+        if (i === lastIndex && length > 1) {
+            names += ' & ';
+        } else if (i !== 0) {
+            names += ', ';
         }
+        names += namesObj[i].name;
     }
-    return names
+    return names;
 };
 
 module.exports = joinNames;

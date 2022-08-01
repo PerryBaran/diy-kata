@@ -13,7 +13,7 @@ const humanCatDogYears = number => {
             dogYears += 5;
         }
     }
-    return [number, catYears, dogYears]
+    return [number, catYears, dogYears];
 };
 
 module.exports = humanCatDogYears;

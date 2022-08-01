@@ -31,5 +31,9 @@ describe("joinNames", () => {
     }, {
       name: 'Marge'
     }])).toBe('Bart, Lisa, Maggie, Homer & Marge')
-  })
+  });
+
+  it('works for empty arrays', () => {
+    expect(joinNames([])).toBe('');
+  });
 });
